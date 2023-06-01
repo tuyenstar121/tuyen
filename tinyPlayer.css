@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+
+.wrapper {
+
+  border: 0.125em solid rgba(238, 238, 238, 0.589);
+  border-radius: 0.5em;
+  padding: 1em 1em 1em;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.music-container {
+   background-color: rgba(27, 25, 25, 0.5); 
+  border-radius: 1em;
+  box-shadow: 0 1em 1.25em 0 rgba(16, 21, 88, 0.6);
+  display: block;
+  padding: 1em 1em;
+  position: relative;
+  margin: 2em 0 0;
+  z-index: 10;
+}
+
+
+
+.navigation {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.125em 0;
+  border-radius: 0.5em;
+  width: 100%;
+}
+
+.action-btn {
+  /* background-color: #fff; */
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  /* border-radius: 0.5em; */
+  /* color: #dfdbdf; */
+  color: #fff;
+  /* color: goldenrod; */
+  font-size: 0.875rem;
+  width: 2em;
+  cursor: pointer;
+  /* margin: 0.5em; */
+  margin: 0 0.5em;
+  padding: 0.5em 0.25em;
+  /* padding-left: 0.25em; */
+}
+
+.action-btn.action-btn-big {
+  /* color: #cdc2d0; */
+  color: #fff;
+  /* color: goldenrod; */
+  font-size: 0.95rem;
+}
+
+/* .action-btn:focus, */
+.action-btn:hover {
+  outline: 0;
+  /* color: #fff; */
+  color: #630733;
+}
+
+.speaker {
+  margin-right: -1.25em;
+  color: #fff;
+  /* text-align: left; */
+  /* color: goldenrod; */
+}
+/* .player_button {
+  background: none;
+  border: 0;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  max-width: 50px;
+  font-size: 1rem;
+}
+.player_button:focus,
+.player_button:hover {
+  border-color: #ffc600;
+  border-color: blue;
+} */
+
+.music-info {
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  border-radius: 1em 1em 0 0;
+  position: absolute;
+  bottom:  40px;
+  left: 1.25em;
+  width: calc(100% - 40px);
+  /* width: 100%; */
+  /* margin: 0 auto; */
+  padding: 0.25em 0.5em 0.25em;
+  text-align: center;
+  /* opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0; */
+}
+
+/* .music-info .vol-controls {
+  text-align: left;
+  padding: 0.25em 0 0.25em;
+} */
+
+/* .music-container.play .music-info { */
+.music-container .music-info {
+  opacity: 1;
+  transform: translateY(-150%);
+  background-color: rgba(2, 60, 15, 0.2);
+  border: 0.125em solid black;
+}
+
+.music-info h4 {
+  color: rgb(240, 244, 242);
+  table-layout: fixed;
+  margin: 0.5em;
+  /* padding: 0 0 0 0.125em; */
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.progress-container {
+  background: #fff;
+  border-radius: 0.25em;
+  cursor: pointer;
+  margin: 0.5em;
+  /* padding-bottom: 0.25em; */
+  height: 0.25em;
+  width: 95%;
+}
+
+.progress {
+  background-color: #15d88d;
+  border-radius: 0.25em;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.player_slider {
+  width: 0.75rem;
+  height: 3rem;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 30%;
+  margin: 0 20px;
+}
+input[type='range']:focus {
+  outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type='range']::-webkit-slider-thumb {
+  height: 0.75em;
+  width: 1em;
+  border-radius: 0.25em;
+  background: goldenrod;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
+  box-shadow: 0 0 2px rgb(17, 14, 158);
+}
+
+input[type='range']::-moz-range-track {
+  width: 60%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: #ffffff;
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type='range']::-moz-range-thumb {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+  height: 12px;
+  width: 17px;
+  border-radius: 50px;
+  background: #fe8daa;
+  cursor: pointer;
+}
+
+.time {
+  color: #fff;
+  font-size: 0.9rem;
+  padding-right: 0.25em;
+  /* had to add that to stop the width shifting from NaN */
+  /* width: 6em; */
+}
+
+ 
+.form {
+  position: absolute;
+  inset: 3px;
+  border-radius: 10px;
+  background: #0e101a;
+  z-index: 1;
+  padding: 50px;
+  align-items: center;
+  background-repeat: repeat;
+  background-blend-mode: hard-light;
+
+  background-size: cover;
+  animation: anitu 40s ease-in-out infinite;
+
+}
+
+@keyframes anitu {
+  0% {
+    background-image: url("image/a.jpg");
+
+  }
+
+  25% {
+    background-image: url("image/2.png");
+
+  }
+
+  50% {
+    background-image: url("image/3.png");
+
+  }
+  75%{
+    background-image: url("image/4.png");
+  }
+
+  100% {
+
+    background-image: url("image/a.jpg");
+
+  }
+ 
+}
